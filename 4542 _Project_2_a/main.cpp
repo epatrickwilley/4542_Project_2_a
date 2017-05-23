@@ -14,8 +14,10 @@ using namespace std;
 #include "knapsack.h"
 #include <cmath>
 #include <stack>
+#include <algorithm>
 
 void exhaustiveKnapsack(knapsack& k, int time);
+void greedyKnapsack(knapsack& k, int time);
 
 int main()
 {
@@ -27,10 +29,10 @@ int main()
     // Read the name of the graph from the keyboard or
     // hard code it here for testing.
 
-    //fileName = "knapsack8.input";
+    fileName = "knapsack20.input";
 
     cout << "Enter filename" << endl;
-    cin >> fileName;
+    //cin >> fileName;
 
     fin.open(fileName.c_str());
     if (!fin)
@@ -44,10 +46,15 @@ int main()
         cout << "Reading knapsack instance" << endl;
         knapsack k(fin);
 
-        exhaustiveKnapsack(k, 600);
+		cout << "test" << endl;
+        greedyKnapsack(k, 600);
+
 
         cout << endl << "Best solution found" << endl;
         k.printSolution();
+
+		int y;
+		cin >> y;
 
     }
 
@@ -59,6 +66,40 @@ int main()
     {
         cout << ex.what() << endl; exit(1);
     }
+}
+
+void greedyKnapsack(knapsack& k, int time)
+{
+	clock_t timestart = clock(); //Set the start of the clock for timeout
+	clock_t timenow;
+	int timeelapsed = 0, tempcost = 0, tempvalue = 0;
+	int size = k.getNumObjects();
+	vector<bool> tempstring, bestobject; //Strings to hold the current and best forms of packing the stack
+	//vector<double> costdensity;
+	tempstring.resize(size);
+	bestobject.resize(size);
+
+	cout << "sort" << endl;
+	sort(k.items.begin(), k.items.end());
+
+	int j = 0;
+
+	while(tempcost <= k.getCostLimit() && timeelapsed < time) 
+	{
+		k.select(k.items[j].index);
+
+		tempcost += k.getCost(k.items[j].index);
+		tempvalue += k.getValue(k.items[j].index);
+
+		timenow = clock();
+		timeelapsed = (float)(timenow - timestart) / CLOCKS_PER_SEC;
+
+		cout << "loop" << endl;
+
+	}
+
+
+	
 }
 
 void exhaustiveKnapsack(knapsack& k, int time)

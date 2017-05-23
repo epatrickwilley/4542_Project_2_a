@@ -118,6 +118,20 @@
     <ClInclude Include="d_random.h" />
     <ClInclude Include="knapsack.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="knapsack1024.input" />
+    <None Include="knapsack12.input" />
+    <None Include="knapsack128.input" />
+    <None Include="knapsack16.input" />
+    <None Include="knapsack20.input" />
+    <None Include="knapsack256.input" />
+    <None Include="knapsack28.input" />
+    <None Include="knapsack32.input" />
+    <None Include="knapsack48.input" />
+    <None Include="knapsack512.input" />
+    <None Include="knapsack64.input" />
+    <None Include="knapsack8.input" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -23,6 +23,25 @@ public:
     int totalValue;
     int totalCost;
 
+	struct item
+	{
+
+		double costdensity;
+		int index;
+
+
+		bool operator < (const item& str) const
+
+		{
+			return (costdensity < str.costdensity);
+		}
+
+
+
+	};
+
+	vector<item> items;
+
 
 
 private:
@@ -32,7 +51,7 @@ private:
     vector<int> value;
     vector<int> cost;
     vector<bool> selected;
-    vector<double> costdensity;
+	vector<double> costdensity;
 };
 
 knapsack::knapsack(ifstream &fin)
@@ -51,15 +70,19 @@ knapsack::knapsack(ifstream &fin)
    selected.resize(n);
    costdensity.resize(n);
    index.resize(n);
+   items.resize(n);
 
    for (int i = 0; i < n; i++)
    {
       fin >> j >> v >> c;
       value[j] = v;
       cost[j] = c;
-      costdensity[j] = (double)v/c;
+      costdensity[j] = (double)v/pow(c,2);
       index[i] = j;
+	  items[j].index = index[j];
+	  items[j].costdensity = costdensity[j];
       unSelect(j);
+
    }
 
    totalValue = 0;

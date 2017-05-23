@@ -33,4 +33,42 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="knapsack8.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack12.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack16.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack20.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack28.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack32.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack48.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack64.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack128.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack256.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack512.input">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="knapsack1024.input">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
