@@ -78,7 +78,8 @@ knapsack::knapsack(ifstream &fin)
       fin >> j >> v >> c;
       value[j] = v;
       cost[j] = c;
-      costdensity[j] = (double)v/pow(c,2);
+      //costdensity[j] = (double)v/pow(c,2);
+	  costdensity[j] = (double)(v / c);
       index[i] = j;
 	  items[j].index = index[j];
 	  items[j].costdensity = costdensity[j];
@@ -185,7 +186,7 @@ void knapsack::printSolution()
 // Prints out the solution.
 {
    ofstream myfile;
-   myfile.open("output8.txt");
+   myfile.open("output1024.txt");
    cout << "------------------------------------------------" << endl;
 
    cout << "Total value: " << getValue() << endl;
