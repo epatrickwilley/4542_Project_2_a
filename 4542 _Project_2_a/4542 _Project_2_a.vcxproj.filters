@@ -71,4 +71,42 @@
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="output1024.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output8.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output12.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output16.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output20.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output28.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output32.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output48.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output64.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output128.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output256.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="output512.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

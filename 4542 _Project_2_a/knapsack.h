@@ -1,3 +1,4 @@
+//Edward Patrick Willey and Patrick Buzza
 // Knapsack class
 // Version f08.1
 #include <iomanip>
@@ -184,7 +185,7 @@ void knapsack::printSolution()
 // Prints out the solution.
 {
    ofstream myfile;
-   myfile.open("output1024.txt");
+   myfile.open("output8.txt");
    cout << "------------------------------------------------" << endl;
 
    cout << "Total value: " << getValue() << endl;

@@ -1,3 +1,4 @@
+//Edward Patrick Willey and Patrick Buzza
 // Project 1a: Solving knapsack using exhaustive search
 //
 
@@ -29,10 +30,10 @@ int main()
     // Read the name of the graph from the keyboard or
     // hard code it here for testing.
 
-    fileName = "knapsack20.input";
+    //fileName = "knapsack512.input";
 
     cout << "Enter filename" << endl;
-    //cin >> fileName;
+    cin >> fileName;
 
     fin.open(fileName.c_str());
     if (!fin)
@@ -53,8 +54,6 @@ int main()
         cout << endl << "Best solution found" << endl;
         k.printSolution();
 
-		int y;
-		cin >> y;
 
     }
 
@@ -79,22 +78,48 @@ void greedyKnapsack(knapsack& k, int time)
 	tempstring.resize(size);
 	bestobject.resize(size);
 
-	cout << "sort" << endl;
+	cout << "Sort" << endl;
 	sort(k.items.begin(), k.items.end());
 
-	int j = 0;
-
-	while(tempcost <= k.getCostLimit() && timeelapsed < time) 
+	/*for (int l = 0; l < size; l++)
 	{
-		k.select(k.items[j].index);
+		cout << k.items[l].index << endl;
+		cout << k.items[l].costdensity << endl;
+	}*/
 
-		tempcost += k.getCost(k.items[j].index);
-		tempvalue += k.getValue(k.items[j].index);
+	int j = 0;
+	bool done = false;
+
+	while( done != true && timeelapsed < time) 
+	{
+
+		if (tempcost < k.getCostLimit())
+		{
+			k.select(k.items[j].index);
+
+			tempcost += k.getCost(k.items[j].index);
+			tempvalue += k.getValue(k.items[j].index);
+
+			j++; ///
+		}
+		else if(tempcost > k.getCostLimit())
+		{
+			j--;
+
+			k.unSelect(k.items[j].index);
+		
+			j = j + 2;
+		}
+
+		if (j >= k.getNumObjects())
+		{
+			cout << "All objects checked" << endl;
+			done = true;
+		}
 
 		timenow = clock();
 		timeelapsed = (float)(timenow - timestart) / CLOCKS_PER_SEC;
 
-		cout << "loop" << endl;
 
 	}
 
