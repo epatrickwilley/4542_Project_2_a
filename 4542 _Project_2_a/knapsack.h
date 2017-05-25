@@ -34,7 +34,7 @@ public:
 		bool operator < (const item& str) const
 
 		{
-			return (costdensity < str.costdensity);
+			return (costdensity > str.costdensity);
 		}
 
 
@@ -79,7 +79,7 @@ knapsack::knapsack(ifstream &fin)
       value[j] = v;
       cost[j] = c;
       //costdensity[j] = (double)v/pow(c,2);
-	  costdensity[j] = (double)(v / c);
+	  costdensity[j] = (double)v / c;
       index[i] = j;
 	  items[j].index = index[j];
 	  items[j].costdensity = costdensity[j];

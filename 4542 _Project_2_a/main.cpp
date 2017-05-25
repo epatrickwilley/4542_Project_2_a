@@ -83,8 +83,7 @@ void greedyKnapsack(knapsack& k, int time)
 
 	/*for (int l = 0; l < size; l++)
 	{
-		cout << k.items[l].index << endl;
-		cout << k.items[l].costdensity << endl;
+		cout << "index: "<<  k.items[l].index << " CD: " << k.items[l].costdensity << endl;
 	}*/
 
 	int j = 0;

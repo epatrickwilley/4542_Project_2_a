@@ -145,6 +145,7 @@
     <Text Include="output512.txt" />
     <Text Include="output64.txt" />
     <Text Include="output8.txt" />
+    <Text Include="Results2a.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

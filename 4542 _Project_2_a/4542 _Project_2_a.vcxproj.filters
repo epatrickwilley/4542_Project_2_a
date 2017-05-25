@@ -108,5 +108,8 @@
     <Text Include="output512.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="Results2a.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

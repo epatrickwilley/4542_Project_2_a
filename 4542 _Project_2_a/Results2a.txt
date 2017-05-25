@@ -1,0 +1,13 @@
+Edward Patrick Willey and Patrick Buzza
+
+Greedy Knapsack
+
+To change our knapsack into a greedy algorithm it had to meet two requirements:
+1. At every decision point you take the best decision at that moment.
+2. Decisions are not undone.
+
+To simulate this sort of behavior we started by sorting the knapsacks items in order of costdensity, value divided by weight. Rather than relying on either cost or value alone, costdensity is a more accurate weight of every items overall value. This creates a natural bias towards the most efficient options and a result that is very close to a maximal knapsack. 
+
+As runtime goes, the slowest part about the algorithm is the built in sorting process provided by C++. The Sort function runs in O(nlogn), while the  greedy knapsack only goes through the list once, giving it a worst case of O(n). 
+
+result, heuristic, conculsion on results, result quality   
