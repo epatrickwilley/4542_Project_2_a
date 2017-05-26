@@ -79,7 +79,7 @@ void greedyKnapsack(knapsack& k, int time)
 	bestobject.resize(size);
 
 	cout << "Sort" << endl;
-	sort(k.items.begin(), k.items.end());
+	sort(k.items.begin(), k.items.end()); //sorts struct in decending order
 
 	/*for (int l = 0; l < size; l++)
 	{
@@ -89,10 +89,10 @@ void greedyKnapsack(knapsack& k, int time)
 	int j = 0;
 	bool done = false;
 
-	while( done != true && timeelapsed < time) 
+	while( done != true && timeelapsed < time)  //as long as the list isnt over and the time isnt up
 	{
 
-		if (tempcost < k.getCostLimit())
+		if (tempcost < k.getCostLimit()) //if the last added didnt go over the limit
 		{
 			k.select(k.items[j].index);
 
@@ -101,7 +101,7 @@ void greedyKnapsack(knapsack& k, int time)
 
 			j++; ///
 		}
-		else if(tempcost > k.getCostLimit())
+		else if(tempcost > k.getCostLimit()) //if the last added went over the limit remove it and move on
 		{
 			j--;
 
